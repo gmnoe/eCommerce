@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { PRODUCTS } from './app/shared/PRODUCTS';
+import Product from './components/Product';
 
 function App() {
   return (
