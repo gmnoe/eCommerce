@@ -1,5 +1,5 @@
-const Rating = (props) => {
-    const { rating, numReviews } = props;
+const Rating = ({ product }) => {
+    const { rating, numReviews } = product;
     return (
         <div className='rating'>
             <span>

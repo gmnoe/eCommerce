@@ -42,7 +42,7 @@ export const PRODUCTS = [
         image: p1,
         price: 120,
         brand: 'Nike',
-        rating: 5,
+        rating: 3,
         numReviews: 15,
         description: 'High quality product'
     },
