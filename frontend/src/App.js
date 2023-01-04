@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
-import ProductDetail from './pages/ProductDetailPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<HomePage />} exact />
                 <Route path='/product' element={<ProductPage />} />
-                <Route path='/product/:id' element={<ProductDetail />} />
+                <Route path='/product/:id' element={<ProductDetailPage />} />
             </Routes>
             <Footer />
         </div>
