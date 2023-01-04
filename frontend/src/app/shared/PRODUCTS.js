@@ -7,10 +7,10 @@ export const PRODUCTS = [
         name: 'Nike Slim Shirt',
         category: 'Shirts',
         image: p1,
-        price: '$120',
+        price: 120,
         brand: 'Nike',
         rating: 4.5,
-        numReviews: 10,
+        numReviews: 101,
         description: 'High quality product'
     },
     {
@@ -20,8 +20,8 @@ export const PRODUCTS = [
         image: p1,
         price: 120,
         brand: 'Nike',
-        rating: 4.5,
-        numReviews: 10,
+        rating: 3.5,
+        numReviews: 8,
         description: 'High quality product'
     },
     {
@@ -31,8 +31,8 @@ export const PRODUCTS = [
         image: p1,
         price: 120,
         brand: 'Nike',
-        rating: 4.5,
-        numReviews: 10,
+        rating: 4,
+        numReviews: 31,
         description: 'High quality product'
     },
     {
@@ -42,8 +42,8 @@ export const PRODUCTS = [
         image: p1,
         price: 120,
         brand: 'Nike',
-        rating: 4.5,
-        numReviews: 10,
+        rating: 5,
+        numReviews: 15,
         description: 'High quality product'
     },
     {
@@ -54,7 +54,18 @@ export const PRODUCTS = [
         price: 120,
         brand: 'Nike',
         rating: 4.5,
-        numReviews: 10,
+        numReviews: 44,
+        description: 'High quality product'
+    },
+    {
+        id: 5,
+        name: 'Nike Slim Shirt',
+        category: 'Shirts',
+        image: p1,
+        price: 120,
+        brand: 'Nike',
+        rating: 1,
+        numReviews: 30,
         description: 'High quality product'
     }
 ]
