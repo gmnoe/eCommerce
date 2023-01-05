@@ -1,23 +1,25 @@
+import { Link } from "react-router-dom";
+import { Card, CardBody } from "reactstrap";
 import Rating from "../../components/Rating";
 
 const ProductCard = ({ product }) => {
-    const { id, name, image, numReviews, price } = product;
+    const { id, name, image, price } = product;
     return (
-        <div key={id} className="card">
-            <a href={`/product/${id}`}>
+        <Card>
+            <Link to={`${id}`}>
                 {/* image size: 680px by 830px */}
                 <img className="medium" src={image} alt={name} />
-            </a>
-            <div className="card-body">
-                <a href={`/product/${id}`}>
+            </Link>
+            <CardBody>
+                <Link to={`${id}`}>
                     <h2>{name}</h2>
-                </a>
-                <Rating product={product} numReviews={numReviews} />
+                </Link>
+                <Rating product={product} />
                 <div className="price">
                     ${price}
                 </div>
-            </div>
-        </div>
+            </CardBody>
+        </Card>
     );
 }
 

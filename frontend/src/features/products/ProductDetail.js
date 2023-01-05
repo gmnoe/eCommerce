@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Rating from "../../components/Rating";
 
 const ProductDetail = ({ product }) => {
-    const { image, name, numReviews, price, description, countInStock } = product;
+    const { image, name, price, description, stock } = product;
     return (
         <div>
             <Link to='/product'>Back To Result</Link>
@@ -16,7 +16,7 @@ const ProductDetail = ({ product }) => {
                             <h1>{name}</h1>
                         </li>
                         <li>
-                            <Rating rating={product} numReviews={numReviews} />
+                            <Rating product={product} />
                         </li>
                         <li>
                             Price: ${price}
@@ -40,8 +40,8 @@ const ProductDetail = ({ product }) => {
                                 <div className='row'>
                                     <div>Status</div>
                                     <div>
-                                        {countInStock > 0 ? (<span className='success'>In Stock</span>
-                                        ) : (<span className='error'>Unavailable</span>)
+                                        {stock > 0 ? (<span className='success'> In Stock</span>
+                                        ) : (<span className='error'> Unavailable</span>)
                                         }
                                     </div>
                                 </div>

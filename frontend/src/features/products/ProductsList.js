@@ -1,11 +1,12 @@
-import { PRODUCTS } from '../../app/shared/PRODUCTS';
 import ProductCard from './ProductCard';
+import { selectAllProducts } from './ProductsSlice';
 
 const ProductsList = () => {
+    const products = selectAllProducts();
     return (
         <div className='row center'>
             {
-                PRODUCTS.map((product) => (
+                products.map((product) => (
                     <ProductCard key={product.id} product={product} />
                 ))
             }
