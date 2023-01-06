@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend1 --exec node --experimental-modules backend1/server.js"
+    "start": "nodemon --watch backend1 --exec node --experimental-modules backend/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/gmnoe/eCommerce#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "morgan": "^1.9.1"
   }
 }

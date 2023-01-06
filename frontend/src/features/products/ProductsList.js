@@ -1,8 +1,9 @@
+import { useSelector } from 'react-redux';
 import ProductCard from './ProductCard';
 import { selectAllProducts } from './ProductsSlice';
 
 const ProductsList = () => {
-    const products = selectAllProducts();
+    const products = useSelector(selectAllProducts);
     return (
         <div className='row center'>
             {
