@@ -1,9 +1,13 @@
 import express from 'express';
 import PRODUCTS from './PRODUCTS.js';
+import cors from 'cors';
 
 const app = express();
 
-app.get('/api/products', (req, res) => {
+app.use(cors());
+
+
+app.get('/product', (req, res) => {
     res.send(PRODUCTS);
 });
 
