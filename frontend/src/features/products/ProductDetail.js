@@ -5,7 +5,7 @@ const ProductDetail = ({ product }) => {
     const { image, name, price, description, stock } = product;
     return (
         <div>
-            <Link to='/product'>Back To Result</Link>
+            <Link to='/products'>Back To Result</Link>
             <div className='row top'>
                 <div className='col-2'>
                     <img className='large' src={image} alt={name} />

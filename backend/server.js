@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 
 
-app.get('/product', (req, res) => {
+app.get('/products', (req, res) => {
     res.send(PRODUCTS);
 });
 
@@ -20,3 +20,5 @@ const port = process.env.port || 5000;
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`)
 });
+
+app.use(express.static('public'))

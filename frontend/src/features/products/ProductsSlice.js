@@ -9,7 +9,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchProducts = createAsyncThunk(
     'products/fetchProducts',
     async () => {
-        const response = await fetch('http://localhost:5000/product');
+        const response = await fetch('http://localhost:5000/products');
         if (!response.ok) {
             return Promise.reject('Unable to fetch, status: ' + response.status);
         }

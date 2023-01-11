@@ -3,7 +3,7 @@ const Header = () => {
             <header className="row">
             <div>
                 <a className="brand" href="/">eCommerce</a>
-                <a href='/product'>Products</a>
+                <a href='/products'>Products</a>
             </div>
             <div>
                 <a href="/cart">Cart</a>
