@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
-            <header className="row">
+        <header className="row">
             <div>
-                <a className="brand" href="/">eCommerce</a>
-                <a href='/products'>Products</a>
+                <Link className="brand" to="/">eCommerce</Link>
+                <Link to='/products'>Products</Link>
             </div>
             <div>
-                <a href="/cart">Cart</a>
-                <a href="/signin">Sign In</a>
+                <Link to="/cart">Cart</Link>
+                <Link to="/signin">Sign In</Link>
             </div>
         </header>
     );

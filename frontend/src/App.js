@@ -8,12 +8,17 @@ import ProductPage from './pages/ProductPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import './App.css';
 import { fetchProducts } from './features/products/ProductsSlice';
+import CartPage from './pages/CartPage';
+import { getCartItems, increase } from './features/cart/CartSlice';
+
 
 function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(fetchProducts());
+        dispatch(getCartItems());
+        dispatch(increase());
     }, [dispatch]);
     
     return (
@@ -21,6 +26,8 @@ function App() {
             <Header />
             <Routes>
                 <Route path='/' element={<HomePage />} exact />
+                <Route path='/cart' element={<CartPage />} />
+                <Route path='/cart/:productId' element={<CartPage />} />
                 <Route path='/products' element={<ProductPage />} />
                 <Route path='/products/:productId' element={<ProductDetailPage />} />
             </Routes>

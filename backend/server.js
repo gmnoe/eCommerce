@@ -6,6 +6,14 @@ const app = express();
 
 app.use(cors());
 
+app.get('/products/:productId', (req, res) => {
+    const product = PRODUCTS.find((x) => x._id === req.params.id);
+    if (product) {
+        res.send(product);
+    } else {
+        res.status(404).send({ message: 'Product Not Found' });
+    }
+});
 
 app.get('/products', (req, res) => {
     res.send(PRODUCTS);

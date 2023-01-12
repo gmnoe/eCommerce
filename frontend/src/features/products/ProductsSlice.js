@@ -1,10 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import { PRODUCTS } from '../../app/shared/oldData/PRODUCTS';
-// import { baseUrl } from '../../app/shared/baseUrl';
-// import { mapImageUrl } from '../../utils/mapImageUrl';
-// import axios from 'axios';
-
-
 
 export const fetchProducts = createAsyncThunk(
     'products/fetchProducts',
@@ -19,7 +13,6 @@ export const fetchProducts = createAsyncThunk(
         return data;
     }
 );
-
 
 const initialState = {
     productsArray: [],
@@ -53,8 +46,6 @@ export const selectAllProducts = (state) => {
     console.log(state.products.productsArray);
     return state.products.productsArray;
 };
-
-
 
 // export const selectRandomProduct = () => {
 //     return PRODUCTS[Math.floor(PRODUCTS.length * Math.random())];
