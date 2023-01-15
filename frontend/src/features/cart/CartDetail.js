@@ -1,5 +1,6 @@
 import { useParams, useLocation } from "react-router-dom";
 
+
 const CartDetail = () => {
     const { productId } = useParams();
     const { search } = useLocation();

@@ -1,14 +1,26 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Rating from "../../components/Rating";
+import { addToCart } from "../cart/CartSlice";
 
 const ProductDetail = ({ product }) => {
     const { image, name, price, description, stock } = product;
     const { productId } = useParams();
     const [qty, setQty] = useState(1);
     const navigate = useNavigate();
-    const handleAddToCart = () => {
+    const dispatch = useDispatch();
+    const handleAddToCart = (select) => {
         navigate(`/cart/${productId}?qty=${qty}`);
+        const item = {
+            id: parseInt(productId),
+            qty: qty,
+            name: name,
+            image: image,
+            price: price,
+            description: description
+        };
+        dispatch(addToCart(item));
       };
 
     return (

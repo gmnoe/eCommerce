@@ -1,5 +1,4 @@
-export default {
-    PRODUCTS: [
+exports.PRODUCTS = [
         {
             id: 0,
             name: 'Nike Slim Shirt',
@@ -73,4 +72,3 @@ export default {
             description: 'High quality product'
         }
     ]
-}

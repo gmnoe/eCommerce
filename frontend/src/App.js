@@ -9,7 +9,6 @@ import ProductDetailPage from './pages/ProductDetailPage';
 import './App.css';
 import { fetchProducts } from './features/products/ProductsSlice';
 import CartPage from './pages/CartPage';
-import { getCartItems, increase } from './features/cart/CartSlice';
 
 
 function App() {
@@ -17,8 +16,6 @@ function App() {
 
     useEffect(() => {
         dispatch(fetchProducts());
-        dispatch(getCartItems());
-        dispatch(increase());
     }, [dispatch]);
     
     return (

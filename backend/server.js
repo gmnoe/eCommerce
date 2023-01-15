@@ -1,13 +1,13 @@
-import express from 'express';
-import PRODUCTS from './PRODUCTS.js';
-import cors from 'cors';
+const express = require('express');
+const { PRODUCTS } = require('./PRODUCTS.js');
+const cors = require('cors');
 
 const app = express();
 
 app.use(cors());
 
 app.get('/products/:productId', (req, res) => {
-    const product = PRODUCTS.find((x) => x._id === req.params.id);
+    const product = PRODUCTS.find((x) => x.id === req.params.id);
     if (product) {
         res.send(product);
     } else {

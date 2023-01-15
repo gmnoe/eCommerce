@@ -31,7 +31,7 @@ const productsSlice = createSlice({
         [fetchProducts.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.errMsg = '';
-            state.productsArray = action.payload.PRODUCTS;
+            state.productsArray = action.payload;
         },
         [fetchProducts.rejected]: (state, action) => {
             state.isLoading = false;
