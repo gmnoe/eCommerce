@@ -43,7 +43,7 @@ const productsSlice = createSlice({
 export const productsReducer = productsSlice.reducer;
 
 export const selectAllProducts = (state) => {
-    console.log(state.products.productsArray);
+    // console.log(state.products.productsArray);
     return state.products.productsArray;
 };
 

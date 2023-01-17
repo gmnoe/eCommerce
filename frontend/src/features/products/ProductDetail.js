@@ -14,11 +14,12 @@ const ProductDetail = ({ product }) => {
         navigate(`/cart/${productId}?qty=${qty}`);
         const item = {
             id: parseInt(productId),
-            qty: qty,
+            qty: parseInt(qty),
             name: name,
             image: image,
             price: price,
-            description: description
+            description: description,
+            stock: stock
         };
         dispatch(addToCart(item));
       };
@@ -67,7 +68,7 @@ const ProductDetail = ({ product }) => {
                                 </div>
                             </li>
                             {
-                                stock > 0 && (
+                                stock > 0 ? (
                                     <>
                                     <li>
                                         <div className='row'>
@@ -88,7 +89,9 @@ const ProductDetail = ({ product }) => {
                                         <button onClick={handleAddToCart} className='primary block'>Add to Cart</button>
                                     </li>
                                     </>
-                                )
+                                ) : <div>
+                                    
+                                </div>
                             }
                         </ul>
                     </div>

@@ -22,13 +22,16 @@ const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
-        addToCart: (state, action) => {
-            const itemInCart = state.cartArray.find((item) => item.id === action.payload.id);
+        addToCart: (state, { payload }) => {
+            const itemInCart = state.cartArray.find((item) => item.id === payload.id);
             if (itemInCart) {
-              itemInCart.qty++;
+              itemInCart.qty += payload.qty;
             } else {
-              state.cartArray.push({ ...action.payload });
+              state.cartArray.push(payload);
             }
+        },
+        emptyCart: (state) => {
+            state.cartArray = [];
         }
     },
     extraReducers: {
@@ -49,11 +52,11 @@ const cartSlice = createSlice({
 
 export const cartReducer = cartSlice.reducer;
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, emptyCart } = cartSlice.actions;
 
-export const selectAllProducts = (state) => {
-    console.log(state.products.productsArray);
-    return state.products.productsArray;
+export const selectAllCart = (state) => {
+    console.log(state.cart.cartArray);
+    return state.cart.cartArray;
 };
 
 // export const selectRandomProduct = () => {
