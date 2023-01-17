@@ -68,7 +68,7 @@ const ProductDetail = ({ product }) => {
                                 </div>
                             </li>
                             {
-                                stock > 0 ? (
+                                stock > 0 && (
                                     <>
                                     <li>
                                         <div className='row'>
@@ -89,9 +89,7 @@ const ProductDetail = ({ product }) => {
                                         <button onClick={handleAddToCart} className='primary block'>Add to Cart</button>
                                     </li>
                                     </>
-                                ) : <div>
-                                    
-                                </div>
+                                )
                             }
                         </ul>
                     </div>

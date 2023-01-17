@@ -55,7 +55,7 @@ export const cartReducer = cartSlice.reducer;
 export const { addToCart, emptyCart } = cartSlice.actions;
 
 export const selectAllCart = (state) => {
-    console.log(state.cart.cartArray);
+    // console.log(state.cart.cartArray);
     return state.cart.cartArray;
 };
 
