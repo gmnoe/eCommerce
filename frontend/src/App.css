@@ -48,6 +48,8 @@ footer {
   color: #cb8e00;
 }
 
+/* button */
+
 button {
   background-color: #f8f8f8;
   cursor: pointer;
@@ -137,3 +139,21 @@ img.large {
   color: #404040;
 }
 
+/* form */
+
+button.form {
+  background-color: #cb8e00;
+  color: #203040;
+  width: 98%;
+  border-radius: 0.5rem;
+}
+
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.label {
+  margin: 1rem 0;
+  display: block;
+}
