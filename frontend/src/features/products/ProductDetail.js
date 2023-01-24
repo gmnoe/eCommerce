@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { Button, Card, CardBody } from "reactstrap";
 import Rating from "../../components/Rating";
 import { addToCart } from "../cart/CartSlice";
 
@@ -10,7 +11,7 @@ const ProductDetail = ({ product }) => {
     const [qty, setQty] = useState(1);
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const handleAddToCart = (select) => {
+    const handleAddToCart = () => {
         navigate(`/cart/${productId}?qty=${qty}`);
         const item = {
             id: parseInt(productId),
@@ -26,53 +27,36 @@ const ProductDetail = ({ product }) => {
 
     return (
         <div className='container'>
-            <Link to='/products'>Back To Result</Link>
-            <div className='row'>
-                <div className='col'>
+            <Link to='/products' className='link'>&#60; Back To Result</Link>
+            <div className='row mt-5'>
+                <div className='col-5'>
                     <img className='large' src={image} alt={name} />
                 </div>
                 <div className='col'>
-                    <ul>
-                        <li>
-                            <h1>{name}</h1>
-                        </li>
-                        <li>
-                            <Rating product={product} />
-                        </li>
-                        <li>
-                            Price: ${price}
-                        </li>
-                        <li>
-                            Description: 
-                            <p>{description}</p>
-                        </li>
-                    </ul>
+                    <h1>{name}</h1>
+                    <Rating product={product} /> <br />
+                    <h5>Price: ${price}</h5> <br /> <br />
+                    <h5>Description: </h5>
+                    <p>{description}</p>
                 </div>
                 <div className='col'>
-                    <div className='card card-body'>
-                        <ul>
-                            <li>
+                    <Card className='card' body outline color="secondary">
+                        <CardBody>
                                 <div className='row'>
-                                    <div>Price</div>
                                     <div className='price'>${price}</div>
                                 </div>
-                            </li>
-                            <li>
                                 <div className='row'>
-                                    <div>Status</div>
                                     <div>
-                                        {stock > 0 ? (<span className='success'> In Stock</span>
+                                        {stock > 0 ? (<span className='text-success'> In Stock</span>
                                         ) : (<span className='error'> Unavailable</span>)
                                         }
                                     </div>
                                 </div>
-                            </li>
                             {
                                 stock > 0 && (
                                     <>
-                                    <li>
                                         <div className='row'>
-                                            <div>Qty :</div>
+                                            <div>Qty : {' '}
                                             <select 
                                                 value={qty} 
                                                 onChange={e => setQty(e.target.value)}
@@ -83,16 +67,16 @@ const ProductDetail = ({ product }) => {
                                                     ))
                                                 }
                                             </select>
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <button onClick={handleAddToCart} className='primary block'>Add to Cart</button>
-                                    </li>
+                                        <div className='row mt-4 mb-0'>
+                                        <Button onClick={handleAddToCart} className='primary'>Add to Cart</Button>
+                                        </div>
                                     </>
                                 )
                             }
-                        </ul>
-                    </div>
+                        </CardBody>
+                    </Card>
                 </div>
             </div>
         </div>

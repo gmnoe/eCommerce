@@ -17,19 +17,11 @@ const Header = () => {
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
             <Collapse isOpen={menuOpen} navbar>
                 <Nav className navbar>
-                    <UncontrolledDropdown nav inNavbar>
-                        <DropdownToggle nav caret>
+                    <NavItem>
+                        <NavLink className='nav-link' to='/products'>
                             Products
-                        </DropdownToggle>
-                        <DropdownMenu right>
-                            <NavLink className='nav-link' to='/products'>
-                                <DropdownItem>Clothing</DropdownItem>
-                            </NavLink>
-                            <NavLink className='nav-link' to='/products'>
-                                <DropdownItem>Electronics</DropdownItem>
-                            </NavLink>
-                        </DropdownMenu>
-                    </UncontrolledDropdown>
+                        </NavLink>
+                    </NavItem>
                 </Nav>
                 <Nav className='ms-auto' navbar>
                     <NavItem>

@@ -11,7 +11,7 @@ const ProductsList = () => {
             {
                 (products && products.length) &&
                 products.map((product) => (
-                    <div className='col-md-3 m-4'>
+                    <div className='col-md-3'>
                         <ProductCard key={product.id} product={product} />
                     </div>
                 ))

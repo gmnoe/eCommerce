@@ -23,74 +23,79 @@ const CartDetail = () => {
     const checkoutHandler = () => {
         navigate('signin?redirect=shipping');
     }
-    console.log(cart);
 
     return (
         <div className='container'>
-                    <h1>Shopping Cart</h1>
-                    {cart.length === 0 ? 
-                        <div className='row'>
-                            Cart is empty. <Link to='/products'>Go Shopping</Link>
-                        </div>
-                        :
-                        (
-                            <div>
-                                {
-                                    cart.map((item) => (
-                                        <div key={item.id} className='row'>
-                                                <div className='col'>
-                                                    <img
-                                                        src={item.image}
-                                                        alt={item.name}
-                                                        className='small'
-                                                    ></img>
-                                                </div>
-                                                <div className='col min-30'>
-                                                    <Link to={`/products/${item.id}`}>
-                                                        {item.name}
-                                                    </Link>
-                                                </div>
-                                                <Col>
-                                                    <Button onClick={() => decreaseQtyHandler(item)}>
-                                                        <span>-</span>
-                                                    </Button>
-                                                        {item.qty}
-                                                    <Button onClick={() => increaseQtyHandler(item)}>
-                                                        +
-                                                    </Button>
-                                                </Col>
-                                                <Col>${item.price}</Col>
-                                                <Col>
-                                                    <Button type='button' onClick={() => removeFromCartHandler(item)}>
-                                                        Delete
-                                                    </Button>
-                                                </Col>
-                                        </div>
-                                    ))
-                                }
-                            </div>
-                        )
-                    }
-                <Col>
-                    <Card>
-                        <CardBody>
-                                    <h2>
-                                        Subtotal ({cart.reduce((a, c) => a + c.qty, 0)} items) : $
-                                        {cart.reduce((a, c) => a + c.price * c.qty, 0)}
-                                    </h2>
-                                    <Button 
-                                        type='button' 
-                                        onClick={checkoutHandler} 
-                                        className='primary-block' 
-                                        disabled={cart.length === 0}
-                                    >
-                                        Proceed to Checkout
-                                    </Button>
-                        </CardBody>
-                    </Card>
-                </Col>
+            <h1>Shopping Cart</h1> <br />
+            {cart.length === 0 ? 
+                <div className='row'>
+                    <div className='col-4'>
+                        Cart is empty. <Link className='link' to='/'>Go Shopping</Link>
+                    </div>
+                </div>
+                :
+                (
+                    <>
+                        {
+                            cart.map((item) => (
+                                <div key={item.id} className='row mb-3'>
+                                    <div className='col'>
+                                        <img
+                                            src={item.image}
+                                            alt={item.name}
+                                            className='small'
+                                        />
+                                    </div>
+                                    <div className='col mt-3'>
+                                        <Link className='link' to={`/products/${item.id}`}>
+                                            {item.name}
+                                        </Link>
+                                    </div>
+                                    <Col className='mt-3'>
+                                        <Button className='increment' onClick={() => decreaseQtyHandler(item)}>
+                                            -
+                                        </Button>
+                                            {' '}
+                                            {item.qty}
+                                            {' '}
+                                        <Button className='increment' onClick={() => increaseQtyHandler(item)}>
+                                            +
+                                        </Button>
+                                    </Col>
+                                    <Col className='mt-3'>${item.price}</Col>
+                                    <Col className='mt-3'>
+                                        <Button type='button' className='primary' onClick={() => removeFromCartHandler(item)}>
+                                            Delete
+                                        </Button>
+                                    </Col>
+                                </div>
+                            ))
+                        }
+                    </>
+                )
+            }
+                <div className='row mt-5'>
+                    <div className='col-6 ms-auto'>
+                        <Card>
+                            <CardBody>
+                                <h2>
+                                    Subtotal ({cart.reduce((a, c) => a + c.qty, 0)} items) : $
+                                    {cart.reduce((a, c) => a + c.price * c.qty, 0)}
+                                </h2>
+                                <Button 
+                                    type='button' 
+                                    onClick={checkoutHandler} 
+                                    className='primary' 
+                                    disabled={cart.length === 0}
+                                >
+                                            Proceed to Checkout
+                                        </Button>
+                            </CardBody>
+                        </Card>
+                    </div>
+                </div>
                 <div>
-                    <Button type='button' onClick={() => handleEmptyCart()}>
+                    <Button type='button' className='primary' onClick={() => handleEmptyCart()}>
                         Empty Cart
                     </Button>
                 </div>

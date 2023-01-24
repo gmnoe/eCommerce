@@ -7,14 +7,87 @@ html {
   background-color: #203040;
 }
 
+.badge {
+  background-color: #cb8e00;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+
+
 footer {
   background-color: #203040;
-  color: white;
+  color: #ffffff;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   overflow: hidden;
+}
+
+.link {
+  text-decoration: none;
+  color: #203040;
+}
+
+.link:hover {
+  color: #cb8e00;
+}
+
+button {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  border:0.1rem #404040 solid;
+}
+
+button.primary {
+  background-color: #cb8e00;
+  color: #203040;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+button.increment {
+  background-color: #cb8e00;
+  color: #203040;
+  border-radius: 0.5rem;
+}
+
+/* Card */
+.card {
+  border: 10em #c0c0c0 solid;
+  border-radius: 0.5rem;
+  margin: 0.8rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.card-name {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  color: #203040;
+}
+
+.card-name:hover {
+  color: #cb8e00;
 }
 
 /* image */
@@ -34,5 +107,18 @@ img.medium {
 }
 
 img.large {
+  max-width: 32rem;
   width: 100%;
 }
+
+/* rating */
+
+.rating span {
+  color: #cb8e00;
+  margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: #404040;
+}
+

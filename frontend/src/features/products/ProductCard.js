@@ -11,8 +11,8 @@ const ProductCard = ({ product }) => {
                 <img className='medium' src={image} alt={name} />
             </Link>
             <CardBody>
-                <Link to={`${id}`}>
-                    <h2>{name}</h2>
+                <Link className='link' to={`${id}`}>
+                    <h2 className='card-name'>{name}</h2>
                 </Link>
                 <Rating product={product} />
                 <div className="price">
