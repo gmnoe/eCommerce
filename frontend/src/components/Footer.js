@@ -1,7 +1,11 @@
+import { Container } from "reactstrap";
+
 const Footer = () => {
     return (
-        <footer className="row center site-footer">
-            All Rights Reserved
+        <footer className='site-footer'>
+            <Container className='text-center'>
+                All Rights Reserved
+            </Container>
         </footer>
     );
 }

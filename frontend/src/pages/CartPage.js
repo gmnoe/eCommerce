@@ -6,7 +6,6 @@ import { selectAllProducts, selectProductById } from "../features/products/Produ
 
 
 const CartPage = () => {
-    const { productId } = useParams();
     const product = useSelector(selectAllProducts)
 
     return (

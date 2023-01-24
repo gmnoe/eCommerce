@@ -1,28 +1,54 @@
+import { useState } from "react";
+import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem, UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu } from "reactstrap";
+import { NavLink } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { selectAllCart } from "../features/cart/CartSlice";
 
 const Header = () => {
 
     const cart = useSelector(selectAllCart);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="row">
-            <div>
-                <Link className="brand" to="/">eCommerce</Link>
-                <Link to='/products'>Products</Link>
-            </div>
-            <div>
-                <Link to="/cart">
-                    Cart
-                    {cart.length > 0 && (
-                        <span className='badge'>{cart.length}</span>
-                    )}
-                </Link>
-                <Link to="/signin">Sign In</Link>
-            </div>
-        </header>
-    );
+        <Navbar dark sticky='top' expand='md'>
+            <NavbarBrand className='ms-5' href='/'>
+                <h1 className="mt-1">eComm</h1>
+            </NavbarBrand>
+            <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
+            <Collapse isOpen={menuOpen} navbar>
+                <Nav className navbar>
+                    <UncontrolledDropdown nav inNavbar>
+                        <DropdownToggle nav caret>
+                            Products
+                        </DropdownToggle>
+                        <DropdownMenu right>
+                            <NavLink className='nav-link' to='/products'>
+                                <DropdownItem>Clothing</DropdownItem>
+                            </NavLink>
+                            <NavLink className='nav-link' to='/products'>
+                                <DropdownItem>Electronics</DropdownItem>
+                            </NavLink>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>
+                </Nav>
+                <Nav className='ms-auto' navbar>
+                    <NavItem>
+                        <NavLink className='nav-link' to='/cart'>
+                            <i className='fa fa-home fa-lg' /> Cart
+                            {cart.length > 0 && (
+                                <span className='badge'>{cart.length}</span>
+                            )}
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className='nav-link' to='/signin'>
+                            <i className='fa fa-home fa-lg' /> Sign In
+                        </NavLink>
+                    </NavItem>
+                </Nav>
+            </Collapse>
+        </Navbar>
+    )
 }
 
 export default Header;

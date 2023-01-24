@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
         <Card>
             <Link to={`${id}`}>
                 {/* image size: 680px by 830px */}
-                <img className="medium" src={image} alt={name} />
+                <img className='medium' src={image} alt={name} />
             </Link>
             <CardBody>
                 <Link to={`${id}`}>

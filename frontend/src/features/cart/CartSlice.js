@@ -1,9 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { baseUrl } from '../../app/shared/baseUrl';
 
 export const itemToAdd = createAsyncThunk(
     'cart/itemToAdd',
     async (productId, { dispatch }) => {
-        const response = await fetch(`http://localhost:5000/products/${productId}`);
+        const response = await fetch(baseUrl + `products/${productId}`);
         if (!response.ok) {
             return Promise.reject('Unable to fetch, status: ' + response.status);
         }
@@ -75,15 +76,7 @@ export const selectAllCart = (state) => {
     return state.cart.cartArray;
 };
 
-// export const selectRandomProduct = () => {
-//     return PRODUCTS[Math.floor(PRODUCTS.length * Math.random())];
-// };
-
 export const selectCartById = (id) => (state) => {
     return state.cart.cartArray.find(
         (product) => product.id === parseInt(id));
 };
-
-// export const selectFeaturedProduct = () => {
-//     return PRODUCTS.find((product) => product.featured);
-// }

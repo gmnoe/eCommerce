@@ -25,13 +25,13 @@ const ProductDetail = ({ product }) => {
       };
 
     return (
-        <div>
+        <div className='container'>
             <Link to='/products'>Back To Result</Link>
-            <div className='row top'>
-                <div className='col-2'>
+            <div className='row'>
+                <div className='col'>
                     <img className='large' src={image} alt={name} />
                 </div>
-                <div className='col-1'>
+                <div className='col'>
                     <ul>
                         <li>
                             <h1>{name}</h1>
@@ -48,7 +48,7 @@ const ProductDetail = ({ product }) => {
                         </li>
                     </ul>
                 </div>
-                <div className='col-1'>
+                <div className='col'>
                     <div className='card card-body'>
                         <ul>
                             <li>
