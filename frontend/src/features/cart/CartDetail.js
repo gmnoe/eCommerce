@@ -46,12 +46,12 @@ const CartDetail = () => {
                                             className='small'
                                         />
                                     </div>
-                                    <div className='col mt-3'>
+                                    <div className='col justify-content-center mt-3'>
                                         <Link className='link' to={`/products/${item.id}`}>
                                             {item.name}
                                         </Link>
                                     </div>
-                                    <Col className='mt-3'>
+                                    <div className='col align-content-center mt-3'>
                                         <Button className='increment' onClick={() => decreaseQtyHandler(item)}>
                                             -
                                         </Button>
@@ -61,13 +61,13 @@ const CartDetail = () => {
                                         <Button className='increment' onClick={() => increaseQtyHandler(item)}>
                                             +
                                         </Button>
-                                    </Col>
-                                    <Col className='mt-3'>${item.price}</Col>
-                                    <Col className='mt-3'>
+                                    </div>
+                                    <div className='col-md text-center mt-3'>${item.price}</div>
+                                    <div className='col mt-3'>
                                         <Button type='button' className='primary' onClick={() => removeFromCartHandler(item)}>
                                             Delete
                                         </Button>
-                                    </Col>
+                                    </div>
                                 </div>
                             ))
                         }
@@ -75,7 +75,7 @@ const CartDetail = () => {
                 )
             }
                 <div className='row mt-5'>
-                    <div className='col-6 ms-auto'>
+                    <div className='col-md-6 ms-auto'>
                         <Card>
                             <CardBody>
                                 <h2>
@@ -92,12 +92,8 @@ const CartDetail = () => {
                                         </Button>
                             </CardBody>
                         </Card>
+                        <br />
                     </div>
-                </div>
-                <div>
-                    <Button type='button' className='primary' onClick={() => handleEmptyCart()}>
-                        Empty Cart
-                    </Button>
                 </div>
         </div>
     );

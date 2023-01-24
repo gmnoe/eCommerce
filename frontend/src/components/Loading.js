@@ -2,10 +2,12 @@ import { Col } from 'reactstrap';
 
 const Loading = () => {
     return (
-        <Col>
-            <i className='fa fa-spinner fa-pulse fa-3x fa-fw text-primary' />
-            <p>Loading...</p>
-        </Col>
+        <div id='loadingwrap'>
+            <div className='loading'>
+                <i className='fa fa-spinner fa-pulse fa-3x fa-fw' />
+                <p>Loading...</p>
+            </div>
+        </div>
     );
 };
 

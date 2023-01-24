@@ -3,6 +3,18 @@ html {
   min-height: 100%;
 }
 
+#loadingwrap {
+  position: fixed;
+  width: 100%;
+  height:100%;
+  display: flex;
+  top: 0;
+}
+
+.loading {
+  margin: auto;
+}
+
 .navbar-dark {
   background-color: #203040;
 }
@@ -58,6 +70,7 @@ button.primary {
 button.increment {
   background-color: #cb8e00;
   color: #203040;
+  width: 50;
   border-radius: 0.5rem;
 }
 
@@ -66,6 +79,8 @@ button.increment {
   border: 10em #c0c0c0 solid;
   border-radius: 0.5rem;
   margin: 0.8rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0.2rem 0.2rem lightgray;
 }
 
 .card-body {

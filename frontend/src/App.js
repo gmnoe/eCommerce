@@ -9,6 +9,7 @@ import ProductDetailPage from './pages/ProductDetailPage';
 import './App.css';
 import { fetchProducts } from './features/products/ProductsSlice';
 import CartPage from './pages/CartPage';
+import SignInPage from './pages/SignInPage';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path='/' element={<HomePage />} exact />
+                <Route path='signin' element={<SignInPage />} />
                 <Route path='/cart' element={<CartPage />} />
                 <Route path='/cart/:productId' element={<CartPage />} />
                 <Route path='/products' element={<ProductPage />} />
