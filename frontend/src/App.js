@@ -10,6 +10,7 @@ import './App.css';
 import { fetchProducts } from './features/products/ProductsSlice';
 import CartPage from './pages/CartPage';
 import SignInPage from './pages/SignInPage';
+import RegisterPage from './pages/RegisterPage';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<HomePage />} exact />
                 <Route path='signin' element={<SignInPage />} />
+                <Route path='/register' element={<RegisterPage />} />
                 <Route path='/cart' element={<CartPage />} />
                 <Route path='/cart/:productId' element={<CartPage />} />
                 <Route path='/products' element={<ProductPage />} />

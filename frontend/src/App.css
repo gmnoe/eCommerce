@@ -97,8 +97,16 @@ button.increment {
   font-size: 2rem;
 }
 
+@media screen and (min-width: 765px) {
+  .card-name {
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    color: #203040;
+  }
+}
+
 .card-name {
-  font-size: 1.3rem;
+  font-size: 1.0rem;
   padding: 1rem 0;
   color: #203040;
 }
