@@ -11,6 +11,7 @@ import { fetchProducts } from './features/products/ProductsSlice';
 import CartPage from './pages/CartPage';
 import SignInPage from './pages/SignInPage';
 import RegisterPage from './pages/RegisterPage';
+import ShippingAddressPage from './pages/ShippingAddressPage';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                 <Route path='/' element={<HomePage />} exact />
                 <Route path='signin' element={<SignInPage />} />
                 <Route path='/register' element={<RegisterPage />} />
+                <Route path='/shipping' element={<ShippingAddressPage />} />
                 <Route path='/cart' element={<CartPage />} />
                 <Route path='/cart/:productId' element={<CartPage />} />
                 <Route path='/products' element={<ProductPage />} />

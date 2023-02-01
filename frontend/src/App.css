@@ -20,7 +20,7 @@ html {
 }
 
 .badge {
-  background-color: #cb8e00;
+  background-color: #fbb000;
   color: #ffffff;
   border-radius: 50%;
   padding: 0.2rem 0.7rem;
@@ -45,7 +45,7 @@ footer {
 }
 
 .link:hover {
-  color: #cb8e00;
+  color: #fbb000;
 }
 
 /* button */
@@ -63,14 +63,14 @@ button:hover {
 }
 
 button.primary {
-  background-color: #cb8e00;
+  background-color: #fbb000;
   color: #203040;
   width: 100%;
   border-radius: 0.5rem;
 }
 
 button.increment {
-  background-color: #cb8e00;
+  background-color: #fbb000;
   color: #203040;
   width: 50;
   border-radius: 0.5rem;
@@ -112,7 +112,7 @@ button.increment {
 }
 
 .card-name:hover {
-  color: #cb8e00;
+  color: #fbb000;
 }
 
 /* image */
@@ -139,7 +139,7 @@ img.large {
 /* rating */
 
 .rating span {
-  color: #cb8e00;
+  color: #fbb000;
   margin: 0.1rem;
 }
 
@@ -150,7 +150,7 @@ img.large {
 /* form */
 
 button.form {
-  background-color: #cb8e00;
+  background-color: #fbb000;
   color: #203040;
   width: 98%;
   border-radius: 0.5rem;
@@ -164,4 +164,17 @@ button.form {
 .label {
   margin: 1rem 0;
   display: block;
+}
+
+/* Checkout Steps */
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+}
+
+.checkout-steps > div.active {
+  border-top-color: #fbb000;
+  color: #fbb000;
 }
