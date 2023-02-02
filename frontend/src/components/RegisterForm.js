@@ -62,7 +62,9 @@ const RegisterForm = () => {
                         <Col>
                         <Field
                             name='password'
+                            type='password'
                             placeholder='Enter Password'
+                            onBlur={Formik.handleBlur}
                             className='form-control'
                         />
                         <ErrorMessage name='password'>
@@ -79,6 +81,8 @@ const RegisterForm = () => {
                         <Col>
                         <Field
                             name='confirmPassword'
+                            type='password'
+                            onBlur={Formik.handleBlur}
                             placeholder='Confirm Password'
                             className='form-control'
                         />

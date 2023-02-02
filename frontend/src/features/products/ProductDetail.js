@@ -48,7 +48,7 @@ const ProductDetail = ({ product }) => {
                                 <div className='row'>
                                     <div>
                                         {stock > 0 ? (<span className='text-success'> In Stock</span>
-                                        ) : (<span className='error'> Unavailable</span>)
+                                        ) : (<span className='text-danger'> Unavailable</span>)
                                         }
                                     </div>
                                 </div>

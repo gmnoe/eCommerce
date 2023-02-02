@@ -1,74 +1,74 @@
 exports.PRODUCTS = [
         {
             id: 0,
-            name: 'Nike Slim Shirt',
-            category: 'Shirts',
-            image: '/images/p1.jpg',
-            price: 120,
-            stock: 20,
-            brand: 'Nike',
+            name: 'Bluetooth Headphones',
+            category: 'Electronics',
+            image: '/images/airpods.jpg',
+            price: 89.99,
+            stock: 4,
+            brand: 'Appple',
             rating: 4.5,
             numReviews: 101,
-            description: 'High quality product'
+            description: 'Bluetooth technology lets you connect to compatible devices.'
         },
         {
             id: 1,
-            name: 'Adidas Slim Shirt',
-            category: 'Shirts',
-            image: '/images/p1.jpg',
-            price: 120,
+            name: 'Smart Speaker',
+            category: 'Electronics',
+            image: '/images/alexa.jpg',
+            price: 29.99,
             stock: 10,
-            brand: 'Nike',
+            brand: 'Amazin',
             rating: 3.5,
             numReviews: 8,
-            description: 'High quality product'
+            description: 'Popular smart speaker. Fits perfectly wherever you want it.'
         },
         {
             id: 2,
-            name: 'Reebok Dress Shirt',
-            category: 'Shirts',
-            image: '/images/p1.jpg',
-            price: 120,
+            name: 'Camera',
+            category: 'Electronics',
+            image: '/images/camera.jpg',
+            price: 899.99,
             stock: 0,
-            brand: 'Nike',
+            brand: 'Canon',
             rating: 4,
             numReviews: 31,
-            description: 'High quality product'
+            description: 'Great camera, takes great photos.'
         },
         {
             id: 3,
-            name: 'Nike Dress Shirt',
-            category: 'Shirts',
-            image: '/images/p1.jpg',
-            price: 120,
+            name: 'Gaming Mouse',
+            category: 'Electronics',
+            image: '/images/mouse.jpg',
+            price: 44.99,
             stock: 5,
-            brand: 'Nike',
+            brand: 'Mouser',
             rating: 3,
             numReviews: 15,
-            description: 'High quality product'
+            description: 'Get more control while you are gaming.'
         },
         {
             id: 4,
-            name: 'Nike Slim Shirt',
-            category: 'Shirts',
-            image: '/images/p1.jpg',
-            price: 120,
+            name: 'Smart Phone',
+            category: 'Electronics',
+            image: '/images/phone.jpg',
+            price: 849.99,
             stock: 15,
-            brand: 'Nike',
+            brand: 'Appel',
             rating: 4.5,
             numReviews: 44,
-            description: 'High quality product'
+            description: 'High quality smartphone. Awesome battery, great camera, excellent phone.'
         },
         {
             id: 5,
-            name: 'Nike Slim Shirt',
-            category: 'Shirts',
-            image: '/images/p1.jpg',
-            price: 120,
+            name: 'Gaming Console',
+            category: 'Electronics',
+            image: '/images/playstation.jpg',
+            price: 349.99,
             stock: 12,
-            brand: 'Nike',
+            brand: 'Gamer',
             rating: 1,
             numReviews: 30,
-            description: 'High quality product'
+            description: 'The ultimate console for games, movies, music and television.'
         }
     ]
