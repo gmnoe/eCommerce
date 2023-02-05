@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem, UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu } from "reactstrap";
+import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem } from "reactstrap";
 import { NavLink } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { selectAllCart } from "../features/cart/CartSlice";
@@ -16,13 +16,6 @@ const Header = () => {
             </NavbarBrand>
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
             <Collapse isOpen={menuOpen} navbar>
-                <Nav className navbar>
-                    <NavItem>
-                        <NavLink className='nav-link' to='/products'>
-                            Products
-                        </NavLink>
-                    </NavItem>
-                </Nav>
                 <Nav className='ms-auto' navbar>
                     <NavItem>
                         <NavLink className='nav-link' to='/cart'>

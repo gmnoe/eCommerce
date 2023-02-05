@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
-import { Container } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import Error from '../components/Error';
+import ProductCarousel from '../components/ProductCarousel';
 import Loading from '../components/Loading';
 import ProductsList from '../features/products/ProductsList';
 
@@ -15,6 +16,11 @@ const ProductPage = () => {
         <Error errMsg={errMsg} />
     ) : (
         <Container>
+            <br />
+            <Row className='text-center' id='carousel'>
+                <ProductCarousel />
+            </Row>
+            <br />
             <ProductsList />
         </Container>
     )

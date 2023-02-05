@@ -1,10 +1,13 @@
 const express = require('express');
 const { PRODUCTS } = require('./PRODUCTS.js');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
+app.use(express.static('public'));
 
 app.use(cors());
+
 
 app.get('/products/:productId', (req, res) => {
     const product = PRODUCTS.find((x) => x.id === req.params.id);
@@ -23,10 +26,12 @@ app.get('/', (req, res) => {
     res.send('Server is ready')
 });
 
-const port = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 
-app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`)
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('../frontend/build'));
+}
+
+app.listen(PORT, () => {
+    console.log(`Server listening at http://localhost:${PORT}`)
 });
-
-app.use(express.static('public'))

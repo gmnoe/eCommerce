@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import './App.css';
@@ -24,13 +23,12 @@ function App() {
         <div className='App'>
             <Header />
             <Routes>
-                <Route path='/' element={<HomePage />} exact />
+                <Route path='/' element={<ProductPage />} exact />
                 <Route path='signin' element={<SignInPage />} />
                 <Route path='/register' element={<RegisterPage />} />
                 <Route path='/cart' element={<CartPage />} />
                 <Route path='/cart/:productId' element={<CartPage />} />
-                <Route path='/products' element={<ProductPage />} />
-                <Route path='/products/:productId' element={<ProductDetailPage />} />
+                <Route path='/:productId' element={<ProductDetailPage />} />
             </Routes>
             <Footer />
         </div>

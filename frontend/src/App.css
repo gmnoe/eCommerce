@@ -11,6 +11,23 @@ html {
   top: 0;
 }
 
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1)
+} */
+
+#carousel {
+  background-color: #203040;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#carousel-image {
+  border-radius: 50%;
+}
+
 .loading {
   margin: auto;
 }
@@ -124,6 +141,7 @@ img {
 img.small {
   max-width: 5rem;
   width: 100%;
+  box-shadow: 0.2rem 0.2rem lightgray;
 }
 
 img.medium {

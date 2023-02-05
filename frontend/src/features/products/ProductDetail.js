@@ -27,7 +27,7 @@ const ProductDetail = ({ product }) => {
 
     return (
         <div className='container'>
-            <Link to='/products' className='link'>&#60; Back To Result</Link>
+            <Link to='/' className='link'>&#60; Back To Result</Link>
             <div className='row mt-5'>
                 <div className='col-5'>
                     <img className='large' src={image} alt={name} />
