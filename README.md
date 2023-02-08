@@ -70,6 +70,6 @@ To do:
 - User sign in. Admin sign in. Payment method.
 
 ## Contact
-Greg Noethlich
-gmnoethlich@gmail.com
-gregnoethlich.com
+- Greg Noethlich
+- gmnoethlich@gmail.com
+- gregnoethlich.com
