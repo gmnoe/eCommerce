@@ -38,6 +38,7 @@ developing a larger scale application.
 
 ![productDetail](https://user-images.githubusercontent.com/75701305/217396190-815e98f8-a774-4388-ad21-1ecf1503d470.png)
 
+![shopCart](https://user-images.githubusercontent.com/75701305/231932597-5f4a290f-5270-473e-9135-c579f3fdd704.png)
 
 ## Usage
 Clone respository from github. Install dependencies in frontend folder and in backend folder.
