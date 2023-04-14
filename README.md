@@ -27,7 +27,6 @@ developing a larger scale application.
 - Express
 
 ## Features
-List the ready features here:
 - Product carousel. Slides act as link to pictured product.
 - Product display page with cards.
 - Product detail page with larger photo, description, rating, and ability to add to cart.
