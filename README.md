@@ -42,7 +42,7 @@ List the ready features here:
 
 ## Usage
 Clone respository from github. Install dependencies in frontend folder and in backend folder.
-From the root folder
+From the root folder in the terminal..
 ```console
 cd backend
 npm install
