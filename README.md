@@ -42,9 +42,9 @@ developing a larger scale application.
 
 
 ## Setup
-Created project with following command..
-`npx create-react-app ecommerce --template redux`
-Then installed appropriated dependencies with `npm install [package]`
+- Created project with following command..
+- `npx create-react-app ecommerce --template redux`
+- Then installed appropriated dependencies with `npm install [package]`
 
 ## Usage
 Clone respository from github. Install dependencies in frontend folder and in backend folder.
