@@ -40,6 +40,12 @@ developing a larger scale application.
 
 ![shopCart](https://user-images.githubusercontent.com/75701305/231932597-5f4a290f-5270-473e-9135-c579f3fdd704.png)
 
+
+## Setup
+Created project with following command..
+`npx create-react-app ecommerce --template redux`
+Then installed appropriated dependencies with `npm install [package]`
+
 ## Usage
 Clone respository from github. Install dependencies in frontend folder and in backend folder.
 From the root folder in the terminal..
